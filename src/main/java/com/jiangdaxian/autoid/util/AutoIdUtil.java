@@ -65,12 +65,11 @@ public class AutoIdUtil {
 						throw new Exception("pop id exception");
 					}
 				}
-			}
-			
-			try {
-				result = AUTOID_LOCAL.get(str).pop();
-			}catch(NoSuchElementException e) {
-				
+				try {
+					result = AUTOID_LOCAL.get(str).pop();
+				}catch(NoSuchElementException e) {
+					
+				}
 			}
 			
 			if(result==null) {
